@@ -93,7 +93,7 @@ public final class Response {
     }
     
     
-    internal func response(_ responseResult: @escaping(_ response: ResponseResult)->())-> void {
+    public func response(_ responseResult: @escaping(_ response: ResponseResult)->())-> void {
         guard let req = request else {
             responseResult(ResponseResult(nil, nil, error))
             return
@@ -128,12 +128,12 @@ public final class Response {
 // MARK: -  Response result 
 
 /// use it to catch requst result in it
-internal final class ResponseResult {
+public final class ResponseResult {
     
     public var error: Error?, response: URLResponse?, result: any?, jsonString: string?
 
     
-    init(_ result: any?, _ response: URLResponse?, _ error: Error?, _ json: string? = nil) {
+    public init(_ result: any?, _ response: URLResponse?, _ error: Error?, _ json: string? = nil) {
         self.result = result
         self.response = response
         self.error = error
@@ -145,7 +145,7 @@ internal final class ResponseResult {
 
 
 
-public extension NSMutableData {
+/*public extension NSMutableData {
     
     /*public func add(key: string, value: any)-> void {
      append(Http.boundaryPrefix.toData)
@@ -166,7 +166,7 @@ public extension NSMutableData {
         append(str.toData)
     }
     
-}
+}*/
 
 
 
