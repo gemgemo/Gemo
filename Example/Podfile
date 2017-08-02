@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Gemo_Example' do
+  pod 'Gemo', :path => '../'
+
+  target 'Gemo_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
