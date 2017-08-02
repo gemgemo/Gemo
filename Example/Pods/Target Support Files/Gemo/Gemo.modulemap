@@ -1,0 +1,6 @@
+framework module Gemo {
+  umbrella header "Gemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

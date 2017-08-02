@@ -1,0 +1,16 @@
+PODS:
+  - Gemo (0.1.0)
+
+DEPENDENCIES:
+  - Gemo (from `../`)
+
+EXTERNAL SOURCES:
+  Gemo:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Gemo: 5fb6e7f6b47a6dcb628d0d00b438267d58089acd
+
+PODFILE CHECKSUM: 48a82c4a21a54dd2e1a85fd471be2dc1b5443a74
+
+COCOAPODS: 1.2.1
