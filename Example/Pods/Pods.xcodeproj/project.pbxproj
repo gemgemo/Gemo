@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		004370B01F04A9FD74AB66D3DD0E3868 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A033D9F36C424A307358069F3DD0CF3F /* Mapper.swift */; };
 		0BA6463F74056CB331AE72A90ACBA7FC /* Pods-Gemo_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7EF55D987F84F323B2A253CDCEADC0 /* Pods-Gemo_Tests-dummy.m */; };
 		12B3D074EEF815488C5B9CE9FF99642C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		15B5CDC122D8C1CCC84D2EFE68EC6DDB /* Gemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AA163B9CC215CFB20A43DCBB84D63B9 /* Gemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D8E39E6D15BD3BC36EA620050984FA3 /* Gemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D51C6CB73915445E734D7A830B5448 /* Gemo.swift */; };
+		468680FAD4F0B4368817D2E9CBE1DF9C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA70BEA1568A35ACD189DD4E4D8CBB3F /* Extensions.swift */; };
+		4F092BEFC4BDE8C04CE21D9E37820C71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		6A2D3F001F7C2B81B9EDF95EB18BE12E /* Pods-Gemo_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 589B1477312452A24FCB91D0B57B3F40 /* Pods-Gemo_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7CE52D67BD927694D0E7563B41C283AC /* Gemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B04A96D0D9DB55238C1E87A58F332B73 /* Gemo-dummy.m */; };
-		BA8D709352933143FBB4767438092FCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		C4B965845C8F571F37C1221A632B113A /* Pods-Gemo_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1725AF3F36F935267C5E13F02660B5 /* Pods-Gemo_Example-dummy.m */; };
+		CA9658F243F1F3D86CE3AC9C9F39299F /* Gemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B04A96D0D9DB55238C1E87A58F332B73 /* Gemo-dummy.m */; };
 		CDDC31C1E03E32885960CC7F883A9169 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		D45C02958B9DCC80E9D3CB72954D7F5A /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45959467DCAA76523A6ECDBA23684A06 /* ReplaceMe.swift */; };
+		CFA9D7CEB571D100A8AEBE7704374751 /* Gemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AA163B9CC215CFB20A43DCBB84D63B9 /* Gemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D45B4439A30339E4B9474AD5318FFD85 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A301443B026B4EC9C21E5A90059B30 /* Typealiases.swift */; };
+		D4E40C9C21CC3D526E567C3DF3252FDC /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F21DB2E3ACF227C82ED194F9B644EFE /* Http.swift */; };
 		EA3B4D25CB5FE1B5C64910424B26D70C /* Pods-Gemo_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 68554955C0628F46993131E1AFFA12C5 /* Pods-Gemo_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -24,7 +28,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 25F6CCEA04F6F4B451D0510361F847CF;
+			remoteGlobalIDString = EFB2508A4B9860CC539B1DF9F0CB1F1B;
 			remoteInfo = Gemo;
 		};
 /* End PBXContainerItemProxy section */
@@ -36,9 +40,10 @@
 		0B7EF55D987F84F323B2A253CDCEADC0 /* Pods-Gemo_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Gemo_Tests-dummy.m"; sourceTree = "<group>"; };
 		123CD43CA212E66D5EC687A3DF1298D6 /* Pods-Gemo_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Gemo_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		23DFDF76E0D8F567CE019544A6B47861 /* Gemo.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Gemo.xcconfig; sourceTree = "<group>"; };
+		30A301443B026B4EC9C21E5A90059B30 /* Typealiases.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
 		3C89641AFDD1978E48386346315B3148 /* Pods-Gemo_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Gemo_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		45959467DCAA76523A6ECDBA23684A06 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		4E3D54C3B258A0BDE599EED00D22EEEA /* Gemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Gemo.framework; path = Gemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50D51C6CB73915445E734D7A830B5448 /* Gemo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Gemo.swift; sourceTree = "<group>"; };
 		5127D3D06A89CA26236035B37D98B0DE /* Pods-Gemo_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Gemo_Example.modulemap"; sourceTree = "<group>"; };
 		589B1477312452A24FCB91D0B57B3F40 /* Pods-Gemo_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Gemo_Example-umbrella.h"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -51,6 +56,8 @@
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		956D1C2355372E86D540572E9C2A5313 /* Pods-Gemo_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Gemo_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		97BB3D80B29A780E6969976FFB5DA5F5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F21DB2E3ACF227C82ED194F9B644EFE /* Http.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Http.swift; sourceTree = "<group>"; };
+		A033D9F36C424A307358069F3DD0CF3F /* Mapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
 		A336B55E73671D664B8CF8D3F04200D3 /* Pods-Gemo_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Gemo_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		AAFE8AD0A6A0BF18C933A447E24BB1C7 /* Pods-Gemo_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Gemo_Tests-resources.sh"; sourceTree = "<group>"; };
 		AE1725AF3F36F935267C5E13F02660B5 /* Pods-Gemo_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Gemo_Example-dummy.m"; sourceTree = "<group>"; };
@@ -61,6 +68,7 @@
 		C3939D15EF88EFEF9B05AFFFD5B4ED8A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C44CE0D693FC170E3C5B15C63E948FAF /* Pods-Gemo_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Gemo_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		E80825EEBCCBAA56A7C1B3970E4682B6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA70BEA1568A35ACD189DD4E4D8CBB3F /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		ED118AF7E9480E030C70575AD7151F1E /* Pods-Gemo_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Gemo_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,17 +89,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6C335DBAED01B1A6BAB31632BDB2CFE5 /* Frameworks */ = {
+		E0B36CCD594AF5836146A9F5BFFEC3A7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA8D709352933143FBB4767438092FCF /* Foundation.framework in Frameworks */,
+				4F092BEFC4BDE8C04CE21D9E37820C71 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19E53217D15BCDA4156CFB6743AF3DA8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EA70BEA1568A35ACD189DD4E4D8CBB3F /* Extensions.swift */,
+				50D51C6CB73915445E734D7A830B5448 /* Gemo.swift */,
+				9F21DB2E3ACF227C82ED194F9B644EFE /* Http.swift */,
+				A033D9F36C424A307358069F3DD0CF3F /* Mapper.swift */,
+				30A301443B026B4EC9C21E5A90059B30 /* Typealiases.swift */,
+			);
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		2D1B0DEF9A557C7ABA1F673D4B54FE68 /* Pods-Gemo_Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,32 +139,14 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		490A97E405F14B1CA0AB63D062E8EA96 /* Gemo */ = {
-			isa = PBXGroup;
-			children = (
-				641727CAA6DD7F0BF698E561A0AA7130 /* Classes */,
-			);
-			name = Gemo;
-			path = Gemo;
-			sourceTree = "<group>";
-		};
 		49A5065AA7803106B115271E265679D9 /* Gemo */ = {
 			isa = PBXGroup;
 			children = (
-				490A97E405F14B1CA0AB63D062E8EA96 /* Gemo */,
+				8E62EBBBBBEA006E5DB401494DAEC5C9 /* Gemo */,
 				B0B2C1497C82C9C04D0F356E2FCF04C8 /* Support Files */,
 			);
 			name = Gemo;
 			path = ../..;
-			sourceTree = "<group>";
-		};
-		641727CAA6DD7F0BF698E561A0AA7130 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				45959467DCAA76523A6ECDBA23684A06 /* ReplaceMe.swift */,
-			);
-			name = Classes;
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -155,6 +158,15 @@
 				F1C0695F878CC7111E25ED393639C2D7 /* Products */,
 				9CB7DAF8E88B861C42DB6E6485B93C38 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		8E62EBBBBBEA006E5DB401494DAEC5C9 /* Gemo */ = {
+			isa = PBXGroup;
+			children = (
+				19E53217D15BCDA4156CFB6743AF3DA8 /* Classes */,
+			);
+			name = Gemo;
+			path = Gemo;
 			sourceTree = "<group>";
 		};
 		9CB7DAF8E88B861C42DB6E6485B93C38 /* Targets Support Files */ = {
@@ -227,19 +239,19 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		22CDD7D195297E8E5F6FF9058E5DF083 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFA9D7CEB571D100A8AEBE7704374751 /* Gemo-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		23D536AFDCB6DF93DB4684E2C68036C5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EA3B4D25CB5FE1B5C64910424B26D70C /* Pods-Gemo_Tests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		272FF59BD4186CAA0D430672823BC1C1 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				15B5CDC122D8C1CCC84D2EFE68EC6DDB /* Gemo-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,23 +266,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		25F6CCEA04F6F4B451D0510361F847CF /* Gemo */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BC559E39424BB1EFC9677D2E7304F30A /* Build configuration list for PBXNativeTarget "Gemo" */;
-			buildPhases = (
-				82B4C0D7FB2DFC51D8952B0D3222C044 /* Sources */,
-				6C335DBAED01B1A6BAB31632BDB2CFE5 /* Frameworks */,
-				272FF59BD4186CAA0D430672823BC1C1 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Gemo;
-			productName = Gemo;
-			productReference = 4E3D54C3B258A0BDE599EED00D22EEEA /* Gemo.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		8734B4D46B744AE29511DEBC5CD574EE /* Pods-Gemo_Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5F70DBC62C8B1A8D259DD6AE0E4B76F /* Build configuration list for PBXNativeTarget "Pods-Gemo_Tests" */;
@@ -306,6 +301,23 @@
 			productReference = B02BC9FB1148148E2FBEAF0B4992CC7F /* Pods_Gemo_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		EFB2508A4B9860CC539B1DF9F0CB1F1B /* Gemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8C87D5DFB3B629D2190D0362F99E4AE /* Build configuration list for PBXNativeTarget "Gemo" */;
+			buildPhases = (
+				7B1980F74053F85BDF53F59E4A2C6EED /* Sources */,
+				E0B36CCD594AF5836146A9F5BFFEC3A7 /* Frameworks */,
+				22CDD7D195297E8E5F6FF9058E5DF083 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Gemo;
+			productName = Gemo;
+			productReference = 4E3D54C3B258A0BDE599EED00D22EEEA /* Gemo.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -327,7 +339,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				25F6CCEA04F6F4B451D0510361F847CF /* Gemo */,
+				EFB2508A4B9860CC539B1DF9F0CB1F1B /* Gemo */,
 				D20884A7AEE30904EA8CE0BA791FCA8A /* Pods-Gemo_Example */,
 				8734B4D46B744AE29511DEBC5CD574EE /* Pods-Gemo_Tests */,
 			);
@@ -343,12 +355,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		82B4C0D7FB2DFC51D8952B0D3222C044 /* Sources */ = {
+		7B1980F74053F85BDF53F59E4A2C6EED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CE52D67BD927694D0E7563B41C283AC /* Gemo-dummy.m in Sources */,
-				D45C02958B9DCC80E9D3CB72954D7F5A /* ReplaceMe.swift in Sources */,
+				468680FAD4F0B4368817D2E9CBE1DF9C /* Extensions.swift in Sources */,
+				CA9658F243F1F3D86CE3AC9C9F39299F /* Gemo-dummy.m in Sources */,
+				1D8E39E6D15BD3BC36EA620050984FA3 /* Gemo.swift in Sources */,
+				D4E40C9C21CC3D526E567C3DF3252FDC /* Http.swift in Sources */,
+				004370B01F04A9FD74AB66D3DD0E3868 /* Mapper.swift in Sources */,
+				D45B4439A30339E4B9474AD5318FFD85 /* Typealiases.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,49 +382,13 @@
 		DC178386377AB5F3A1C13ACB4B0DA7E3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Gemo;
-			target = 25F6CCEA04F6F4B451D0510361F847CF /* Gemo */;
+			target = EFB2508A4B9860CC539B1DF9F0CB1F1B /* Gemo */;
 			targetProxy = 46E53C2DF179ED05B1991BA969B31A74 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0D529FCE03C4DC7EFB214A0AD5A2D0CA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A336B55E73671D664B8CF8D3F04200D3 /* Pods-Gemo_Tests.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Gemo_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Gemo_Tests/Pods-Gemo_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Gemo_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		345CC476DF4A7516DBD2220CF5035FF3 /* Debug */ = {
+		4E487F173E6C9664F4E9E26B9635D23C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -448,7 +428,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -456,7 +436,153 @@
 			};
 			name = Debug;
 		};
-		6A3874D44BF59751812418B348FE76FB /* Release */ = {
+		5539397E3FD39AEB83B16E51EB0D6ED4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED118AF7E9480E030C70575AD7151F1E /* Pods-Gemo_Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Gemo_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Gemo_Tests/Pods-Gemo_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Gemo_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		78F6B48CD0C2FD7780B40BC94DFE06A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A336B55E73671D664B8CF8D3F04200D3 /* Pods-Gemo_Tests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Gemo_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Gemo_Tests/Pods-Gemo_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Gemo_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9A9AB92747A74A82BD3BAEA3193381C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1578989C2CAAF54E51059A77FC7C07D /* Pods-Gemo_Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Gemo_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Gemo_Example/Pods-Gemo_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Gemo_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A2E7CA6DF72FDEFE583D762DC36FEAFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23DFDF76E0D8F567CE019544A6B47861 /* Gemo.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Gemo/Gemo-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Gemo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Gemo/Gemo.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Gemo;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A78CA288B9BA49665B510A803FD2A5C7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 666B68BE74B6BF1EB1C12134F1A42F40 /* Pods-Gemo_Example.release.xcconfig */;
 			buildSettings = {
@@ -474,7 +600,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-Gemo_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Gemo_Example/Pods-Gemo_Example.modulemap";
@@ -494,7 +620,7 @@
 			};
 			name = Release;
 		};
-		717E77604BFBB04BEAF56608A1CB2EDE /* Release */ = {
+		BDD0139D6EB93FA375F887ABD62DAB2E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -530,7 +656,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
@@ -538,42 +664,7 @@
 			};
 			name = Release;
 		};
-		86969A0344D6C4065C8A26BE81D884E4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 23DFDF76E0D8F567CE019544A6B47861 /* Gemo.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Gemo/Gemo-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Gemo/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Gemo/Gemo.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Gemo;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		ABE7774ACD9A8FC98747500135CF8E3B /* Release */ = {
+		F83BF0E529A00496036BF6200C749DF0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 23DFDF76E0D8F567CE019544A6B47861 /* Gemo.xcconfig */;
 			buildSettings = {
@@ -592,7 +683,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Gemo/Gemo-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Gemo/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Gemo/Gemo.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -607,89 +698,14 @@
 			};
 			name = Release;
 		};
-		DBEDDADA9DE07B62BE8E759420AF1300 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED118AF7E9480E030C70575AD7151F1E /* Pods-Gemo_Tests.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Gemo_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Gemo_Tests/Pods-Gemo_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Gemo_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		F884D5ABB5139C140585528F245FE216 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1578989C2CAAF54E51059A77FC7C07D /* Pods-Gemo_Example.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Gemo_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Gemo_Example/Pods-Gemo_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Gemo_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				345CC476DF4A7516DBD2220CF5035FF3 /* Debug */,
-				717E77604BFBB04BEAF56608A1CB2EDE /* Release */,
+				4E487F173E6C9664F4E9E26B9635D23C /* Debug */,
+				BDD0139D6EB93FA375F887ABD62DAB2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -697,8 +713,17 @@
 		340614D2D5012D68FCF930164F500ED9 /* Build configuration list for PBXNativeTarget "Pods-Gemo_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F884D5ABB5139C140585528F245FE216 /* Debug */,
-				6A3874D44BF59751812418B348FE76FB /* Release */,
+				9A9AB92747A74A82BD3BAEA3193381C1 /* Debug */,
+				A78CA288B9BA49665B510A803FD2A5C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8C87D5DFB3B629D2190D0362F99E4AE /* Build configuration list for PBXNativeTarget "Gemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2E7CA6DF72FDEFE583D762DC36FEAFF /* Debug */,
+				F83BF0E529A00496036BF6200C749DF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -706,17 +731,8 @@
 		B5F70DBC62C8B1A8D259DD6AE0E4B76F /* Build configuration list for PBXNativeTarget "Pods-Gemo_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0D529FCE03C4DC7EFB214A0AD5A2D0CA /* Debug */,
-				DBEDDADA9DE07B62BE8E759420AF1300 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BC559E39424BB1EFC9677D2E7304F30A /* Build configuration list for PBXNativeTarget "Gemo" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				86969A0344D6C4065C8A26BE81D884E4 /* Debug */,
-				ABE7774ACD9A8FC98747500135CF8E3B /* Release */,
+				78F6B48CD0C2FD7780B40BC94DFE06A0 /* Debug */,
+				5539397E3FD39AEB83B16E51EB0D6ED4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
