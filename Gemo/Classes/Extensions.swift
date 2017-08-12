@@ -40,6 +40,11 @@ public extension String {
         return NumberFormatter().number(from: self)?.doubleValue ?? .zero
     }
     
+    /// converting base64 string to UIImage
+    public var toImage: UIImage? {
+        return UIImage(data: Data(base64Encoded: self, options: .ignoreUnknownCharacters) ?? Data())
+    }
+    
 }
 
 
@@ -115,6 +120,11 @@ public extension UIImageView {
         layer.cornerRadius = radius//bounds.height/2
         layer.borderColor = color.cgColor
         layer.borderWidth = width
+    }
+    
+    /// converting image file to string base 64
+    public var toBase64: string? {
+        return image?.toData(quality: 1.0).base64EncodedString(options: .lineLength64Characters)
     }
     
 }

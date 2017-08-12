@@ -18,6 +18,11 @@ public final class Gemo {
         return Http().request(link: link, method: method, parameters: parameters)
     }
     
+    /// http: using multipart tech
+    public class func upload(_ images: ()->[Media]?, and paramters: Paramters?, to link: string) -> Response {
+        return Http().upload(from: paramters, and: images, to: link)
+    }
+    
     
 }
 

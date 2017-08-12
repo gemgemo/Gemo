@@ -1,28 +1,27 @@
 import Foundation
+import UIKit
 
 // MARK: -  HTTP Methods
-
+public typealias Paramters = [string: any]
 public enum Method: string {
     case get = "GET", post = "POST", put = "PUT", delete = "DELETE"
+}
+
+// MARK:- Encoding Type
+
+public enum EncodingType {
+    case `default`, Json
 }
 
 
 // MARK: - Http Main class
 
 internal final class Http {
+ 
     
-    /*fileprivate static var boundary = "", boundaryPrefix = ""
-    //private static var multipart = MultiPart()
-    
-    private init() {
-        Http.boundary = "Boundary-\(UUID().uuidString)"
-        Http.boundaryPrefix = "--\(Http.boundary)\r\n"
-    }*/
-    
-    
-    internal func request(link: string, method: Method, parameters: [string: any] = [:]) -> Response {
+    internal func request(link: string, method: Method, parameters: Paramters = [:], encoding: EncodingType = .default) -> Response {
         if (link.isEmpty || !link.isLink) {
-            print("requested link \(link)")
+            NSLog("requested link \(link)")
             return Response(request: nil, error: NSError(domain: "Invalid Link", code: 1221, userInfo: nil))
         }
         guard let url = URL(string: link) else {
@@ -30,17 +29,32 @@ internal final class Http {
         }
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
+        var body: Data?
         if (method == .post) {
-            var params = string.empty
-            parameters.forEach { params += "\($0)=\($1)&" }
-            request.httpBody = params.substring(to: params.index(params.endIndex, offsetBy: -1)).data(using: .utf8)
+            switch (encoding) {
+            case .default:
+                var params = string.empty
+                parameters.forEach { params += "\($0)=\($1)&" }
+                body = params.substring(to: params.index(params.endIndex, offsetBy: -1)).data(using: .utf8)
+                
+            case .Json:
+                
+                do {
+                    body = try JSONSerialization.data(withJSONObject: parameters, options: [])
+                    request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+                } catch {
+                    //NSLog("catched error when try to send json paramters is: \(error)")
+                    return Response(request: nil, error: error)
+                }
+            }
+            request.httpBody = body
         }
         return Response(request: request, error: nil)
     }
     
     
     /// Using multipart
-    /*public static func upload(fileWith paramaters: Dictionary<string, any> , to link: string)-> Response {
+    internal func upload(from paramters: Paramters?, and media: ()->[Media]?, to link: string) -> Response {
         if (link.isEmpty || !link.isLink) {
             return Response(request: nil, error: NSError(domain: "Invalid Link", code: 1221, userInfo: nil))
         }
@@ -49,33 +63,41 @@ internal final class Http {
         }
         var request = URLRequest(url: url)
         request.httpMethod = Method.post.rawValue
-        let boundary = "Boundary-\(UUID().uuidString)"
+        let boundary = generateBoundary()
         request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
-        request.httpBody = setUploadBody(parameters: paramaters, boundary: boundary)
+        request.httpBody = createUploadBody(with: paramters, media: media(), boundary: boundary)
         return Response(request: request, error: nil)
     }
     
+    private func generateBoundary() -> String {
+        return "Boundary-\(NSUUID().uuidString)"
+    }
     
-    private class func setUploadBody(parameters: [string: any], boundary: String) -> Data {
-        let body = NSMutableData()
-        let boundaryPrefix = "--\(boundary)\r\n"
-        for (key, value) in parameters {
-            if (value is Data) {
-                body.appendString(boundaryPrefix)
-                body.appendString("Content-Disposition: form-data; name=\"\(key)\"; filename=\"\(NSUUID().uuidString)\"\r\n")//
-                body.appendString("Content-Type: \("image/png")\r\n\r\n")
-                body.append(value as! Data)
-            } else {
-                body.appendString(boundaryPrefix)
-                body.appendString("Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n")
-                body.appendString("\(value)\r\n")
+    private func createUploadBody(with paramters: Paramters?, media: [Media]?, boundary: string) -> Data {
+        let lineBreak = "\r\n"
+        var body = Data()
+        if let params = paramters {
+            for (key, value) in params {
+                body.append("--\(boundary + lineBreak)")
+                body.append("Content-Disposition: form-data; name=\"\(key)\"\(lineBreak + lineBreak)")
+                body.append("\(value)\(lineBreak)")
             }
-            body.appendString("\r\n")
-            body.appendString("--".appending(boundary.appending("--")))
         }
+        if let photos = media {
+            for photo in photos {
+                body.append("--\(boundary + lineBreak)")
+                body.append("Content-Disposition: form-data; name=\"\(photo.key)\"; filename=\"\(photo.filename)\"\(lineBreak)")
+                body.append("Content-Type: \(photo.mimtype + lineBreak + lineBreak)")
+                body.append(photo.imageData)
+                body.append(lineBreak)
+            }
+        }
+        body.append("--\(boundary)--\(lineBreak)")
         
-        return body as Data
-    }*/
+        return body
+    }
+    
+
 }
 
 
@@ -116,7 +138,7 @@ public final class Response {
                                    jsonString)
                 )
             } catch let catchError {
-                print("catched error")
+                //NSLog("catched error")
                 responseResult(ResponseResult(nil, resInfo, catchError, jsonString))
             }
             
@@ -131,7 +153,6 @@ public final class Response {
 public final class ResponseResult {
     
     public var error: Error?, response: URLResponse?, result: any?, jsonString: string?
-
     
     public init(_ result: any?, _ response: URLResponse?, _ error: Error?, _ json: string? = nil) {
         self.result = result
@@ -144,35 +165,34 @@ public final class ResponseResult {
 
 
 
+// MARK:- Media 
 
-/*public extension NSMutableData {
+public struct Media {
     
-    /*public func add(key: string, value: any)-> void {
-     append(Http.boundaryPrefix.toData)
-     append("Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n".toData)
-     append("\(value)\r\n".toData)
-     }
-     
-     public func add(key: string, data: Data, filename: string, mimeType: string) -> void {
-     append(Http.boundaryPrefix.toData)
-     append("Content-Disposition: form-data; name=\"\(key)\"; filename=\"\(filename)\"\r\n".toData)
-     append("Content-Type: \(mimeType)\r\n\r\n".toData)
-     append(data)
-     append("\r\n".toData)
-     append("--".appending(Http.boundary.appending("--")).toData)
-     }*/
+    public let key, filename, mimtype: string, imageData: Data
     
-    public func appendString(_ str: string)-> void  {
-        append(str.toData)
+    init(key: string, mimtype: string, imageData: Data) {
+        self.key = key
+        self.mimtype = mimtype
+        self.imageData = imageData
+        self.filename = "\(Date.timeIntervalSinceReferenceDate).\(mimtype.components(separatedBy: "/").last ?? "png")"
     }
     
-}*/
+    
+    
+    
+}
 
 
+// MARK:-  Data extension
 
-
-
-
+fileprivate extension Data {
+    
+    fileprivate mutating func append(_ value: string) {
+        guard let data = value.data(using: .utf8) else { return }
+        append(data)
+    }
+}
 
 
 
