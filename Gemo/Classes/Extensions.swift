@@ -10,7 +10,6 @@ public extension String {
     }
     
     public var isLink: Bool {
-        //return contains("http://") || contains("https://")
         return NSPredicate(format: "SELF MATCHES %@", "(http|https)://((\\w)*|([0-9]*)|([-|_])*)+([\\.|/]((\\w)*|([0-9]*)|([-|_])*))+").evaluate(with: self)
     }
     
@@ -72,6 +71,7 @@ public extension NSError {
 
 // MARK: - image caching
 private let imageCache = NSCache<NSString,UIImage>()
+
 public extension UIImageView {
     
     public func loadImage(from link: string,_ onComplete: ((_ isLoaded: Bool)-> ())? = nil)-> void {
@@ -117,7 +117,7 @@ public extension UIImageView {
     
     public func rounded(withBorder color: Color = Color.clear, borderWidth width: cgFloat = 0.0, cornerRadius radius: cgFloat)-> void {
         clipsToBounds = true
-        layer.cornerRadius = radius//bounds.height/2
+        layer.cornerRadius = radius
         layer.borderColor = color.cgColor
         layer.borderWidth = width
     }
@@ -177,15 +177,11 @@ public extension UIApplication {
 
 public extension Color {
     
-    public class func rgb(red: Int, green: Int, blue: Int, alpha: Float)-> UIColor {
-        return UIColor(colorLiteralRed: Float(red)/255, green: Float(green)/255, blue: Float(blue)/255, alpha: alpha)
-    }
-    
     public convenience init?(hex hash: string) {
         let r, g, b, a: CGFloat
         if (hash.hasPrefix("#")) {
             let start = hash.index(hash.startIndex, offsetBy: 1)
-            let hexColor = hash.substring(from: start)
+            let hexColor = String(hash[start...])
             let scanner = Scanner(string: hexColor)
             var hexNumber: UInt64 = 0
             if (scanner.scanHexInt64(&hexNumber)) {
@@ -193,7 +189,6 @@ public extension Color {
                 g = CGFloat((hexNumber & 0x00ff0000) >> 16) / 255
                 b = CGFloat((hexNumber & 0x0000ff00) >> 8) / 255
                 a = CGFloat(hexNumber & 0x000000ff) / 255
-                
                 self.init(red: r, green: g, blue: b, alpha: a)
                 return
             }
@@ -240,36 +235,6 @@ public extension Size {
     }
     
 }
-
-
-// MARK: - Map view
-
-/*extension MKMapView
- {
- 
- public func setupCamera()-> void {
- camera.altitude = 1400
- camera.pitch = 50
- camera.heading = 180
- }
- 
- public func setAnnotation(in point: CLLocationCoordinate2D, with title: string, and subTitle: string)-> void {
- let annotation = MKPointAnnotation()
- annotation.coordinate = point
- annotation.title = title
- annotation.subtitle = subTitle
- addAnnotation(annotation)
- }
- 
- public func setRegion(in point: CLLocationCoordinate2D)-> void {
- let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
- let region = MKCoordinateRegion(center: point, span: span)
- setRegion(region, animated: true)
- //setupCamera()
- }
- 
- }
- */
 
 
 // MARK:- Fonts

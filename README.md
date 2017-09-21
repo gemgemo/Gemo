@@ -10,6 +10,47 @@
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+swift 4
+xcode 9
+
+## Usage
+
+```swift
+class ViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        Gemo.request(link: "https://quarkbackend.com/getfile/gemgemo/mony", method: .get)
+            .response(Money.self) { (result) in
+                switch (result) {
+                    case .failure(let error):
+                        print(error)
+
+                    case .jsonString(let jsonString):
+                        print(jsonString)
+
+                    case .success(let object):
+                        print("object:", object)
+                }
+            }
+
+    }
+}
+
+
+
+struct Money: Codable {
+
+    let isMyMoney: Bool
+
+    private enum CodingKeys: String, CodingKey {
+        case isMyMoney = "taked"
+    }
+
+}
+
+```
 
 ## Installation
 
@@ -17,13 +58,14 @@ Gemo is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "Gemo"
+pod 'Gemo'
 ```
 
 ## Author
 
-gemgemo, gamalgemfox@gmail.com
+Gamal, gamalal3yk@gmail.com
 
 ## License
 
 Gemo is available under the MIT license. See the LICENSE file for more info.
+

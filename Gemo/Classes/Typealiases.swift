@@ -22,7 +22,6 @@ public typealias Size = CGSize
 public typealias Rect = CGRect
 public typealias Insets = UIEdgeInsets
 public typealias uint = UInt
-public typealias Object = NSObject
 public typealias null = NSNull
 public typealias Point = CGPoint
 

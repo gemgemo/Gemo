@@ -33,7 +33,7 @@ public final class Gemo {
 public extension Gemo {
     
     /// check internet connection
-    public var isConnected: bool {
+    public static var isConnected: bool {
         var zeroAddress = sockaddr_in()
         zeroAddress.sin_len = UInt8(MemoryLayout<sockaddr_in>.size)
         zeroAddress.sin_family = sa_family_t(AF_INET)

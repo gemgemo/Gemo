@@ -1,21 +1,9 @@
-#
-# Be sure to run `pod lib lint Gemo.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
 
 Pod::Spec.new do |s|
   s.name             = 'Gemo'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = 'my first library'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
 my first library, use to make my work easy
@@ -24,7 +12,7 @@ my first library, use to make my work easy
   s.homepage         = 'https://github.com/gemgemo/Gemo'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'gemgemo' => 'gamalgemfox@gmail.com' }
+  s.author           = { 'Gamal' => 'gamalal3yk@gmail.com' }
   s.source           = { :git => 'https://github.com/gemgemo/Gemo.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 

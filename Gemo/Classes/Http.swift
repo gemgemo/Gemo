@@ -17,7 +17,7 @@ public enum EncodingType {
 // MARK: - Http Main class
 
 internal final class Http {
- 
+    
     
     internal func request(link: string, method: Method, parameters: Paramters = [:], encoding: EncodingType = .default) -> Response {
         if (link.isEmpty || !link.isLink) {
@@ -35,10 +35,9 @@ internal final class Http {
             case .default:
                 var params = string.empty
                 parameters.forEach { params += "\($0)=\($1)&" }
-                body = params.substring(to: params.index(params.endIndex, offsetBy: -1)).data(using: .utf8)
+                body = String(params[..<params.index(params.endIndex, offsetBy: -1)]).data(using: .utf8)
                 
             case .Json:
-                
                 do {
                     body = try JSONSerialization.data(withJSONObject: parameters, options: [])
                     request.addValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -97,7 +96,7 @@ internal final class Http {
         return body
     }
     
-
+    
 }
 
 
@@ -115,31 +114,27 @@ public final class Response {
     }
     
     
-    public func response(_ responseResult: @escaping(_ response: ResponseResult)->())-> void {
+    public func response<T>(_ : T.Type, _ responseResult: @escaping(_ response: Result<T>)->())-> void {
         guard let req = request else {
-            responseResult(ResponseResult(nil, nil, error))
+            responseResult(Result.failure(error))
             return
         }
         session.dataTask(with: req) { (data, resInfo, err) in
             if (err != nil) {
-                responseResult(ResponseResult(nil, resInfo, err))
+                responseResult(Result.failure(err))
                 return
             }
             guard let jsonData = data else {
-                responseResult(ResponseResult(nil, resInfo, err))
+                responseResult(Result.failure(NSError(domain: "No data!", code: 0000, userInfo: nil)))
                 return
             }
             let jsonString = String(data: jsonData, encoding: .utf8)
+            responseResult(Result.jsonString(jsonString))
             do {
-                responseResult(
-                    ResponseResult(try JSONSerialization.jsonObject(with: jsonData, options: .allowFragments),
-                                   resInfo,
-                                   nil,
-                                   jsonString)
-                )
+                let result = try JSONDecoder().decode(T.self, from: jsonData)
+                responseResult(Result.success(result))
             } catch let catchError {
-                //NSLog("catched error")
-                responseResult(ResponseResult(nil, resInfo, catchError, jsonString))
+                responseResult(Result.failure(catchError))
             }
             
             }.resume()
@@ -147,7 +142,11 @@ public final class Response {
 }
 
 
-// MARK: -  Response result 
+// MARK: -  Response result
+
+public enum Result<T: Codable> {
+    case success(T?), failure(Error?), jsonString(string?)
+}
 
 /// use it to catch requst result in it
 public final class ResponseResult {
@@ -162,6 +161,7 @@ public final class ResponseResult {
     }
     
 }
+
 
 
 

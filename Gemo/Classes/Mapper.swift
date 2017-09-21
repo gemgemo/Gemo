@@ -4,7 +4,7 @@ import Foundation
 
 // MARK:- Dictionary Mapper
 
-open class Mapper<T>: Object {
+open class Mapper: NSObject {
     
     private var json: Dictionary<string, any>?, currentValue: any?
     
@@ -42,12 +42,12 @@ open class Mapper<T>: Object {
         return currentValue as? Dictionary<string, any>
     }
     
-    final public var dictionaries: Array<Dictionary<string, any>>? {
-        return currentValue as? Array<Dictionary<string, any>>
-    }
+//    final public var dictionaries: Array<Dictionary<string, any>>? {
+//        return currentValue as? Array<Dictionary<string, any>>
+//    }
     
-    final public var array: Array<T>? {
-        return currentValue as? Array<T>
+    final public var array: Array<any>? {
+        return currentValue as? Array<any>
     }
     
     final public var boolean: bool? {
