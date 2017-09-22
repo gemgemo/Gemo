@@ -114,7 +114,7 @@ public final class Response {
     }
     
     
-    public func response<T>(_ : T.Type, _ responseResult: @escaping(_ response: Result<T>)->())-> void {
+    public func response<T: Codable>(_:T.Type, _ responseResult: @escaping(_ response: Result<T>)->())-> void {
         guard let req = request else {
             responseResult(Result.failure(error))
             return
@@ -144,7 +144,7 @@ public final class Response {
 
 // MARK: -  Response result
 
-public enum Result<T: Codable> {
+public enum Result<T> {
     case success(T?), failure(Error?), jsonString(string?)
 }
 

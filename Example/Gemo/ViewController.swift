@@ -7,18 +7,25 @@
 //
 
 import UIKit
+import Gemo
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        Gemo.request(link: "", method: .get)
+            .response(Person.self) { (res) in
+                
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
 
 }
 
+
+
+
+struct Person: Codable {
+    
+}
