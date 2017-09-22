@@ -12,7 +12,7 @@ my first library, use to make my work easy
   s.homepage         = 'https://github.com/gemgemo/Gemo'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Gamal' => 'gamalal3yk@gmail.com' }
+  s.author           = { 'Gamal' => 'gamalgemfox@gmail.com' }
   s.source           = { :git => 'https://github.com/gemgemo/Gemo.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
