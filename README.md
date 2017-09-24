@@ -4,6 +4,7 @@
 [![Version](https://img.shields.io/cocoapods/v/Gemo.svg?style=flat)](http://cocoapods.org/pods/Gemo)
 [![License](https://img.shields.io/cocoapods/l/Gemo.svg?style=flat)](http://cocoapods.org/pods/Gemo)
 [![Platform](https://img.shields.io/cocoapods/p/Gemo.svg?style=flat)](http://cocoapods.org/pods/Gemo)
+![Swift version](https://img.shields.io/badge/swift-4.0-orange.svg)
 
 ## Example
 

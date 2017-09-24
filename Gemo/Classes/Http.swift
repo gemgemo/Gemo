@@ -19,7 +19,7 @@ public enum EncodingType {
 internal final class Http {
     
     
-    internal func request(link: string, method: Method, parameters: Paramters = [:], encoding: EncodingType = .default) -> Response {
+    internal func request(link: string, method: Method, parameters: Paramters = [:], encoding: EncodingType = .default, headers: Dictionary<string, string> = [:]) -> Response {
         if (link.isEmpty || !link.isLink) {
             NSLog("requested link \(link)")
             return Response(request: nil, error: NSError(domain: "Invalid Link", code: 1221, userInfo: nil))
@@ -29,6 +29,9 @@ internal final class Http {
         }
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
+        if (!headers.isEmpty) {
+            headers.forEach { request.setValue($1, forHTTPHeaderField: $0) }
+        }
         var body: Data?
         if (method == .post) {
             switch (encoding) {
@@ -39,10 +42,9 @@ internal final class Http {
                 
             case .Json:
                 do {
-                    body = try JSONSerialization.data(withJSONObject: parameters, options: [])
+                    body = try JSONEncoder().encode(parameters)
                     request.addValue("application/json", forHTTPHeaderField: "Content-Type")
                 } catch {
-                    //NSLog("catched error when try to send json paramters is: \(error)")
                     return Response(request: nil, error: error)
                 }
             }
@@ -50,6 +52,7 @@ internal final class Http {
         }
         return Response(request: request, error: nil)
     }
+    
     
     
     /// Using multipart

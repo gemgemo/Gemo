@@ -14,8 +14,8 @@ public final class Gemo {
     
     
     /// http: use it to connect with server
-    public class func request(link: string, method: Method, parameters: [string: any] = [:]) -> Response {        
-        return Http().request(link: link, method: method, parameters: parameters)
+    public class func request(link: string, method: Method, parameters: [string: any] = [:], encoding: EncodingType = .default, headers: [string: string] = [:]) -> Response {
+        return Http().request(link: link, method: method, parameters: parameters, encoding: encoding, headers: headers)
     }
     
     /// http: using multipart tech
