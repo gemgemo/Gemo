@@ -14,7 +14,6 @@
 		86F05DAB1F74838400BFA4F0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F05DA91F74833C00BFA4F0 /* Extensions.swift */; };
 		86F05DAC1F74838400BFA4F0 /* Gemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F05DAA1F74833C00BFA4F0 /* Gemo.swift */; };
 		86F05DAD1F74838400BFA4F0 /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F05DA71F74833C00BFA4F0 /* Http.swift */; };
-		86F05DAE1F74838400BFA4F0 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F05DA61F74833B00BFA4F0 /* Mapper.swift */; };
 		86F05DAF1F74838400BFA4F0 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F05DA81F74833C00BFA4F0 /* Typealiases.swift */; };
 		C4B965845C8F571F37C1221A632B113A /* Pods-Gemo_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1725AF3F36F935267C5E13F02660B5 /* Pods-Gemo_Example-dummy.m */; };
 		CA9658F243F1F3D86CE3AC9C9F39299F /* Gemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B04A96D0D9DB55238C1E87A58F332B73 /* Gemo-dummy.m */; };
@@ -50,7 +49,6 @@
 		6EF16370988C9D41BD2D39137200C33B /* Pods-Gemo_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Gemo_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		7ECA28AD55A4131FC97A5E7E1B48D1FA /* Pods-Gemo_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Gemo_Example-frameworks.sh"; sourceTree = "<group>"; };
 		8393EAB54D8E9C7CEA955E1A49706723 /* Pods-Gemo_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Gemo_Tests.modulemap"; sourceTree = "<group>"; };
-		86F05DA61F74833B00BFA4F0 /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
 		86F05DA71F74833C00BFA4F0 /* Http.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Http.swift; sourceTree = "<group>"; };
 		86F05DA81F74833C00BFA4F0 /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
 		86F05DA91F74833C00BFA4F0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -106,7 +104,6 @@
 				86F05DA91F74833C00BFA4F0 /* Extensions.swift */,
 				86F05DAA1F74833C00BFA4F0 /* Gemo.swift */,
 				86F05DA71F74833C00BFA4F0 /* Http.swift */,
-				86F05DA61F74833B00BFA4F0 /* Mapper.swift */,
 				86F05DA81F74833C00BFA4F0 /* Typealiases.swift */,
 			);
 			path = Classes;
@@ -367,7 +364,6 @@
 				86F05DAF1F74838400BFA4F0 /* Typealiases.swift in Sources */,
 				86F05DAB1F74838400BFA4F0 /* Extensions.swift in Sources */,
 				86F05DAC1F74838400BFA4F0 /* Gemo.swift in Sources */,
-				86F05DAE1F74838400BFA4F0 /* Mapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

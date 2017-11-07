@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 
 // MARK: -  HTTP Methods
-public typealias Paramters = [string: any]
+public typealias Parameters = [string: any]
 public enum Method: string {
     case get = "GET", post = "POST", put = "PUT", delete = "DELETE"
 }
@@ -19,7 +19,7 @@ public enum EncodingType {
 internal final class Http {
     
     
-    internal func request(link: string, method: Method, parameters: Paramters = [:], encoding: EncodingType = .default, headers: Dictionary<string, string> = [:]) -> Response {
+    internal func request(link: string, method: Method, parameters: Parameters = [:], encoding: EncodingType = .default, headers: Dictionary<string, string> = [:]) -> Response {
         if (link.isEmpty || !link.isLink) {
             NSLog("requested link \(link)")
             return Response(request: nil, error: NSError(domain: "Invalid Link", code: 1221, userInfo: nil))
@@ -42,7 +42,7 @@ internal final class Http {
                 
             case .Json:
                 do {
-                    body = try JSONEncoder().encode(parameters)
+                    body = try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
                     request.addValue("application/json", forHTTPHeaderField: "Content-Type")
                 } catch {
                     return Response(request: nil, error: error)
@@ -54,9 +54,8 @@ internal final class Http {
     }
     
     
-    
     /// Using multipart
-    internal func upload(from paramters: Paramters?, and media: ()->[Media]?, to link: string) -> Response {
+    internal func upload(from paramters: Parameters?, and media: ()->[Media]?, to link: string) -> Response {
         if (link.isEmpty || !link.isLink) {
             return Response(request: nil, error: NSError(domain: "Invalid Link", code: 1221, userInfo: nil))
         }
@@ -75,7 +74,7 @@ internal final class Http {
         return "Boundary-\(NSUUID().uuidString)"
     }
     
-    private func createUploadBody(with paramters: Paramters?, media: [Media]?, boundary: string) -> Data {
+    private func createUploadBody(with paramters: Parameters?, media: [Media]?, boundary: string) -> Data {
         let lineBreak = "\r\n"
         var body = Data()
         if let params = paramters {
@@ -116,13 +115,13 @@ public final class Response {
         self.error = error
     }
     
-    
-    public func response<T: Codable>(_:T.Type, _ responseResult: @escaping(_ response: Result<T>)->())-> void {
+    public func response<T: Codable>(_: T.Type, _ responseResult: @escaping(_ response: Result<T>)->()) -> void {
         guard let req = request else {
             responseResult(Result.failure(error))
             return
         }
         session.dataTask(with: req) { (data, resInfo, err) in
+            responseResult(Result.response(resInfo))
             if (err != nil) {
                 responseResult(Result.failure(err))
                 return
@@ -139,32 +138,18 @@ public final class Response {
             } catch let catchError {
                 responseResult(Result.failure(catchError))
             }
-            
             }.resume()
     }
+    
+    
 }
 
 
 // MARK: -  Response result
 
 public enum Result<T> {
-    case success(T?), failure(Error?), jsonString(string?)
+    case success(T?), failure(Error?), jsonString(string?), response(URLResponse?)
 }
-
-/// use it to catch requst result in it
-public final class ResponseResult {
-    
-    public var error: Error?, response: URLResponse?, result: any?, jsonString: string?
-    
-    public init(_ result: any?, _ response: URLResponse?, _ error: Error?, _ json: string? = nil) {
-        self.result = result
-        self.response = response
-        self.error = error
-        self.jsonString = json
-    }
-    
-}
-
 
 
 

@@ -1,7 +1,4 @@
-//  Gemo.swift
-//  Gemo
-//  Created by Tech-world on 8/1/17.
-//  Copyright © 2017 servarena. All rights reserved.
+
 
 import Foundation
 import SystemConfiguration
@@ -19,7 +16,7 @@ public final class Gemo {
     }
     
     /// http: using multipart tech
-    public class func upload(_ images: ()->[Media]?, and paramters: Paramters?, to link: string) -> Response {
+    public class func upload(_ images: ()->[Media]?, and paramters: Parameters?, to link: string) -> Response {
         return Http().upload(from: paramters, and: images, to: link)
     }
     

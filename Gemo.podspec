@@ -1,8 +1,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Gemo'
-  s.version          = '0.1.7'
-  s.summary          = 'my first library'
+  s.version          = '0.1.8'
+  s.summary          = 'To make my work more easy'
 
 
   s.description      = <<-DESC

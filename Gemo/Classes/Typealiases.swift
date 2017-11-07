@@ -1,7 +1,5 @@
-//  Typealiases.swift
-//  Gemo
-//  Created by Tech-world on 8/1/17.
-//  Copyright © 2017 servarena. All rights reserved.
+//  Created by Gamal on 8/1/17.
+//  Copyright © 2017 Gamal. All rights reserved.
 
 import Foundation
 
